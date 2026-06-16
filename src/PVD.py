@@ -17,7 +17,7 @@ from skimage.metrics import structural_similarity as ssim
 
 img = Image.open(image_path)
 
-from PIL import Image
+from PIL import Images
 import numpy as np
 
 
@@ -326,7 +326,7 @@ def calculate_ssim(
 
 secret="Maybe its the way you say my name Maybe its the way you play your game But its goodI ve never known anybody like youBut its so good, Ive never dreamed of nobody like youAnd Ive heard of a love that comes once in a lifetimeAnd Im pretty sure "
 original, stego = encode_pvd(
-    "original1.png",
+    "original.png",
     secret,
     "pvd_stego.png"
 )
@@ -392,23 +392,6 @@ plt.show()
 # In[35]:
 
 
-modified = np.any(
-    original != stego,
-    axis=2
-)
-
-plt.figure(figsize=(8,8))
-
-plt.imshow(
-    modified,
-    cmap='gray'
-)
-
-plt.title(
-    "Modified Pixels"
-)
-
-plt.show()
 
 
 # In[36]:
