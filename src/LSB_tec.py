@@ -50,7 +50,7 @@ def encode_lsb(image_path, secret_message, output_path):
 
 secret="Maybe its the way you say my name Maybe its the way you play your game But its goodI ve never known anybody like youBut its so good, Ive never dreamed of nobody like youAnd Ive heard of a love that comes once in a lifetimeAnd Im pretty sure "
 original, stego = encode_lsb(
-    "original1.png",
+    "original.png",
     secret,
     "LSB_stego.png"
 )
